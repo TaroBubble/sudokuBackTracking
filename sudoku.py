@@ -45,9 +45,11 @@ def assignPossible(row, column, num, board):
             return False
     #check box
 
+    xBoxCord = column // 3
+    yBoxCord = row // 3
 
-    for i in range(row, row):
-        for j in range(column, column):
+    for i in range(yBoxCord * 3, yBoxCord * 3 + 3):
+        for j in range(xBoxCord * 3, xBoxCord * 3 + 3):
             if board[i][j] == num and row != i and column != j:
                 return False
     return True 
